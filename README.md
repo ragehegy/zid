@@ -112,3 +112,10 @@
     curl --location --request GET 'http://127.0.0.1:8000/metrics/?sort_by=-CPI&sum=spend&group=country&group=channel&cpi=true&country=CA' \
     --header 'Cookie: csrftoken=wIN6rvACTKdZ6Cr6hvEM9yOdygzRcxXER57XSGfg9xZf1rM3Zqphw74YY0k6dPXd'
     ```
+
+**Running tests:**
+    - Run the command `pytest` in you command form your project root to run all the test cases.
+    - The test cases are labled so you can run specific collection instead of writing the test file name, test case, ..
+    - Check `pytest.ini` markers section for different markers that could be used when running the tests.
+    - To run a specific test collection (i.e. *models, serializers,..*), Run `pytest` with the option `-m` followed by the collction marker.
+        - Running tests that are marked with the models marker: `pytest -m models`
