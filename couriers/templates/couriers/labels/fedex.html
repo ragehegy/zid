@@ -1,0 +1,16 @@
+<div style='padding: 1%;'>
+    <h1>FedEx</h1>
+    <hr/>
+    <table>
+        <tr><td>Pickup location</td><td>{{shipment.pickup_location}}</td></tr>
+        <tr><td>Distanation</td><td>{{shipment.delivery_location}}</td></tr>
+        <tr><td>Weight</td><td>{{shipment.weight}}</td></tr>
+        <tr><td>Dimensions: {{shipment.width}} * {{shipment.width}} </td><td>{{shipment.width}}</td></tr>
+        <tr><td>Date Picked</td><td>{{shipment.date_picked}}</td></tr>
+        <tr><td>Value worth</td><td>{{shipment.value_worth}}</td></tr>
+        <tr><td>Delivery charges</td><td>{{shipment.charges}}</td></tr>
+    </table>
+    <br>
+    <br>
+    <h4>Recipient: <br>{{shipment.recipient}}</h4>
+</div>

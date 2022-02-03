@@ -8,7 +8,8 @@ from couriers.serializers import *
 def test_valid_courier_serializer():
     payload = {
         'name': 'Aramex',
-        'url': 'https://www.django-rest-framework.org/'
+        'url': 'https://www.django-rest-framework.org/',
+        'shipment_cancellable': False
     }
     serializer = CourierSerializer(data=payload)
     assert serializer.is_valid(raise_exception=True) == True
@@ -28,7 +29,8 @@ def test_valid_shipment_serializer():
         "sender": "Mohamed",
         "recipient": "Rageh",
         "pickup_location": "New Cairo, Cairo",
-        "target_location": "Old Cairo, Cairo",
+        "delivery_location": "Old Cairo, Cairo",
+        "current_location": "Old Cairo, Cairo",
         "charges": "10"
     }
     serializer = ShipmentSerializer(data=payload)
