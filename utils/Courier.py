@@ -40,24 +40,6 @@ class Courier:
     def cancel_shipment(self, shipment):
         pass
 
-
-
-SHIPMENT_STATUS = (
-    ('REQUESTED', 'REQUESTED'),
-    ('APPROVED', 'APPROVED'),
-    ('REJECTED', 'REJECTED'),
-    ('CANCELLED', 'CANCELLED'),
-    ('RETURNED', 'RETURNED'),
-    ('READ_TO_PICK', 'READ_TO_PICK'),
-    ('PICKED', 'PICKED'),
-    ('DEPARTED', 'DEPARTED'),
-    ('SHIPPED', 'SHIPPED'),
-    ('CLEARANCE', 'CLEARANCE'),
-    ('PENDING', 'PENDING'),
-    ('DELIVERED', 'DELIVERED'),
-)
-
-
 class AramexCourier(Courier):
     WAYBILL_TEMPLATE = 'aramex.html'
     STATUS_MAP = {

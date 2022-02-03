@@ -5,7 +5,7 @@ from django.utils import timezone
 
 class Courier(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid4)
-    name = models.CharField(max_length=50, blank=False)
+    name = models.CharField(max_length=50, blank=False, unique=True)
     url = models.URLField()
     shipment_cancellable = models.BooleanField(default=False)
     created = models.DateTimeField(auto_now_add=True)

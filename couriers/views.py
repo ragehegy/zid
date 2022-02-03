@@ -61,12 +61,12 @@ class ShipmentView(viewsets.ModelViewSet):
         courier = courier(serializer)
         status = courier.get_shipment_status(shipment.status)
 
-        return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.data)
 
-    @action(detail=True, methods=['GET'])
+    @action(detail=True, methods=['PATCH'])
     def cancel_shipment(self, request, pk):
         shipment = self.get_object()
         shipment.cancel()
         serializer = self.serializer_class(shipment)
 
-        return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.data)
